@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Read</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="page">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="hidden-print">Read</h1>
+          <p class="hidden-print">Type (or copy-and-paste) text here: </p>
+          <textarea class="full-width hidden-print" id="text-source"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="hidden-print"
+                  onclick="r.processInput('#text-source', '#output');">Go</button>
+          <div class="clearfix"></div>
+          <div class="hidden-print">
+            <hr />
+          </div>
+          <div id="output">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/r.js"></script>
+  </body>
+</html>

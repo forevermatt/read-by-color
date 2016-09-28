@@ -1,0 +1,6 @@
+.full-width { width: 100%; }
+
+#page * {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
