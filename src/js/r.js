@@ -22,7 +22,7 @@ r.getColor = function(word) {
 
 r.formatTokens = function(tokens) {
   var formattedTokens = [];
-  var isWordRegEx = /^[A-Za-z]+$/;
+  var isWordRegEx = /^[A-Za-z][A-Za-z']*$/;
   var formattedToken;
   for (var i = 0; i < tokens.length; i++) {
     if (isWordRegEx.test(tokens[i])) {
@@ -56,7 +56,7 @@ r.processInput = function(textSourceId, outputId) {
 r.tokenize = function(text) {
   var tokens = [];
   var chars = text.split('');
-  var isLetterRegEx = /[A-Za-z]/;
+  var isLetterRegEx = /[A-Za-z']/;
   var tempToken = '';
   var lastCharWasLetter = false;
   for (var i = 0; i < chars.length; i++) {
