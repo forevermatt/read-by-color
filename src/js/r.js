@@ -2,7 +2,7 @@
 r = {};
 
 r.getColor = function(word) {
-  var hash = $.md5(word);
+  var hash = $.md5(String(word).toLowerCase());
   console.log(hash); // TEMP
   
   var redHex = hash.substring(0, 2);
