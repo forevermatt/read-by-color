@@ -3,6 +3,10 @@ Some kids have a hard time reading, but are excellent with colors and patterns.
 This is a way to make every word a distinct color, to see if that helps them 
 read.
 
+## Try it
+You can try it out here:  
+<http://forevermatt-web.s3-website-us-east-1.amazonaws.com/read/>
+
 ## What it Does
 This is a purely client-side (aka. HTML, CSS, and JavaScript/jQuery) way to let 
 the user provide you with text and automatically color every word. 
