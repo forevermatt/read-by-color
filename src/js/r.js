@@ -2,7 +2,7 @@
 r = {};
 
 r.getColor = function(word) {
-  var hash = $.md5(String(word).toLowerCase());
+  var hash = $.md5(r.sanitize(word).toLowerCase());
   console.log(hash); // TEMP
   
   var redHex = hash.substring(0, 2);
@@ -22,7 +22,7 @@ r.getColor = function(word) {
 
 r.formatTokens = function(tokens) {
   var formattedTokens = [];
-  var isWordRegEx = /^[A-Za-z][A-Za-z']*$/;
+  var isWordRegEx = /^[A-Za-z][A-Za-z'’]*$/;
   var formattedToken;
   for (var i = 0; i < tokens.length; i++) {
     if (isWordRegEx.test(tokens[i])) {
@@ -53,10 +53,14 @@ r.processInput = function(textSourceId, outputId) {
   $(outputId).html(formattedTokens);
 };
 
+r.sanitize = function(token) {
+  return String(token).replace(/’/g, "'");
+};
+
 r.tokenize = function(text) {
   var tokens = [];
   var chars = text.split('');
-  var isLetterRegEx = /[A-Za-z']/;
+  var isLetterRegEx = /[A-Za-z'’]/;
   var tempToken = '';
   var lastCharWasLetter = false;
   for (var i = 0; i < chars.length; i++) {
