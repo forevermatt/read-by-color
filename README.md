@@ -5,7 +5,7 @@ read.
 
 ## Try it
 You can try it out here:  
-<http://forevermatt-web.s3-website-us-east-1.amazonaws.com/read/>
+<https://goo.gl/bfN9DH>
 
 ## What it Does
 This is a purely client-side (aka. HTML, CSS, and JavaScript/jQuery) way to let 
